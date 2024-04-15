@@ -1,0 +1,17 @@
+name: Exécution du script Python
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  execute-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+
+    - name: Exécution du script Python
+      run: python job.py
