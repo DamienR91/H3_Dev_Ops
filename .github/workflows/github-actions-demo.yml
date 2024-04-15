@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout du code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Exécution du script Python
       run: python job.py

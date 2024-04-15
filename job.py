@@ -1,1 +1,2 @@
-a = 2 print("coucou", a)
+a = 2
+print("coucou", a)
