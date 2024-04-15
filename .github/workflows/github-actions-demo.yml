@@ -1,4 +1,4 @@
-name: Exécution du script Python
+name: Exécution des tests unitaires
 
 on:
   push:
@@ -6,12 +6,15 @@ on:
       - main
 
 jobs:
-  execute-python-script:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout du code
       uses: actions/checkout@v4
 
-    - name: Exécution du script Python
-      run: python job.py
+    - name: Installer les dépendances
+      run: pip install -r requirements.txt
+
+    - name: Exécuter les tests
+      run: pytest
